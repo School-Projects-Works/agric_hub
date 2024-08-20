@@ -1,7 +1,6 @@
-import 'package:firmer_city/utils/styles.dart';
+import '/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 
 class CustomSelector extends ConsumerStatefulWidget {
   const CustomSelector(
@@ -31,7 +30,7 @@ class _CustomSelectorState extends ConsumerState<CustomSelector> {
   bool onHover = false;
   @override
   Widget build(BuildContext context) {
-    var styles = Styles( context);
+    var styles = Styles(context);
     return InkWell(
       onHover: (value) {
         setState(() {

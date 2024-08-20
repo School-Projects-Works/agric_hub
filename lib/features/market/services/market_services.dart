@@ -2,7 +2,7 @@ import 'dart:typed_data';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:firmer_city/features/market/data/product_model.dart';
+import '/features/market/data/product_model.dart';
 
 class MarketServices {
   static final FirebaseFirestore firestore = FirebaseFirestore.instance;

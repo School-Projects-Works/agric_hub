@@ -2,7 +2,7 @@ import 'dart:typed_data';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:firmer_city/features/community/data/community_post_model.dart';
+import '/features/community/data/community_post_model.dart';
 
 class CommunityServices {
   static FirebaseStorage storage = FirebaseStorage.instance;
@@ -21,7 +21,10 @@ class CommunityServices {
 
   // get all posts from firestore snapshot
   static Stream<QuerySnapshot<Map<String, dynamic>>> getPosts() {
-    return firestore.collection('posts').where('isDeleted',isEqualTo: false).snapshots();
+    return firestore
+        .collection('posts')
+        .where('isDeleted', isEqualTo: false)
+        .snapshots();
   }
 
   // get post by id

@@ -1,9 +1,9 @@
-import 'package:firmer_city/config/router/router.dart';
-import 'package:firmer_city/config/router/router_info.dart';
-import 'package:firmer_city/features/auth/provider/login_provider.dart';
-import 'package:firmer_city/features/dashboard/components/side_bar_item.dart';
-import 'package:firmer_city/utils/colors.dart';
-import 'package:firmer_city/utils/styles.dart';
+import '/config/router/router.dart';
+import '/config/router/router_info.dart';
+import '/features/auth/provider/login_provider.dart';
+import '/features/dashboard/components/side_bar_item.dart';
+import '/utils/colors.dart';
+import '/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

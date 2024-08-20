@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firmer_city/features/assistant/data/chat_model.dart';
+
+import '../data/chat_model.dart';
+
 
 class ChatServices{
   static final FirebaseFirestore _firestore = FirebaseFirestore.instance;

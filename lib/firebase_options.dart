@@ -25,9 +25,15 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
-        return windows;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for windows - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -41,48 +47,28 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBN1wt1i7f9hp2X95rPGE4ic5fxIyomEbw',
-    appId: '1:592956308849:web:732a33ef4a33de1c7b8ad0',
-    messagingSenderId: '592956308849',
-    projectId: 'farmer-citi',
-    authDomain: 'farmer-citi.firebaseapp.com',
-    storageBucket: 'farmer-citi.appspot.com',
-    measurementId: 'G-K15ZQ1CRX0',
+    apiKey: 'AIzaSyBLsisKIzuCPjR4SoDh52UH90YuYmzXJkM',
+    appId: '1:306541753546:web:49b1333f1933083d59f033',
+    messagingSenderId: '306541753546',
+    projectId: 'agric-hub-7f633',
+    authDomain: 'agric-hub-7f633.firebaseapp.com',
+    storageBucket: 'agric-hub-7f633.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAOXuvcnZumNlB9M3afuWMHKGb7gEtUw9I',
-    appId: '1:592956308849:android:22f7b077c94c246a7b8ad0',
-    messagingSenderId: '592956308849',
-    projectId: 'farmer-citi',
-    storageBucket: 'farmer-citi.appspot.com',
+    apiKey: 'AIzaSyATDVkG-YddtZkoxFAzSsjywbk4kjT3lHM',
+    appId: '1:306541753546:android:74892580e427ec0359f033',
+    messagingSenderId: '306541753546',
+    projectId: 'agric-hub-7f633',
+    storageBucket: 'agric-hub-7f633.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD8e60gQkNRGFp4vUh37Lzler9xKgzDM98',
-    appId: '1:592956308849:ios:b3c86319ff709de67b8ad0',
-    messagingSenderId: '592956308849',
-    projectId: 'farmer-citi',
-    storageBucket: 'farmer-citi.appspot.com',
+    apiKey: 'AIzaSyAKs-D_l8mjWtsDfJKh4JlJ-pvAXfBi1nI',
+    appId: '1:306541753546:ios:f566a7ca80938da059f033',
+    messagingSenderId: '306541753546',
+    projectId: 'agric-hub-7f633',
+    storageBucket: 'agric-hub-7f633.appspot.com',
     iosBundleId: 'com.example.firmerCity',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyD8e60gQkNRGFp4vUh37Lzler9xKgzDM98',
-    appId: '1:592956308849:ios:b3c86319ff709de67b8ad0',
-    messagingSenderId: '592956308849',
-    projectId: 'farmer-citi',
-    storageBucket: 'farmer-citi.appspot.com',
-    iosBundleId: 'com.example.firmerCity',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBN1wt1i7f9hp2X95rPGE4ic5fxIyomEbw',
-    appId: '1:592956308849:web:671fd989112668bb7b8ad0',
-    messagingSenderId: '592956308849',
-    projectId: 'farmer-citi',
-    authDomain: 'farmer-citi.firebaseapp.com',
-    storageBucket: 'farmer-citi.appspot.com',
-    measurementId: 'G-4G10PRNVT0',
   );
 }

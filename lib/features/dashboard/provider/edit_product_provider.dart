@@ -1,9 +1,9 @@
 import 'dart:typed_data';
-import 'package:firmer_city/config/router/router.dart';
-import 'package:firmer_city/config/router/router_info.dart';
-import 'package:firmer_city/core/widget/custom_dialog.dart';
-import 'package:firmer_city/features/dashboard/provider/new_product_provider.dart';
-import 'package:firmer_city/features/market/data/product_model.dart';
+import '/config/router/router.dart';
+import '/config/router/router_info.dart';
+import '/core/widget/custom_dialog.dart';
+import '/features/dashboard/provider/new_product_provider.dart';
+import '/features/market/data/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
@@ -55,7 +55,7 @@ class EditProductProvider extends StateNotifier<ProductModel> {
   }
 
   void setMeasurement(value) {
-    state = state.copyWith(productMeasurement:  value.toString());
+    state = state.copyWith(productMeasurement: value.toString());
   }
 
   void removeImageUrl(image) {

@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "592956308849",
-    "project_id": "farmer-citi",
-    "storage_bucket": "farmer-citi.appspot.com"
+    "project_number": "306541753546",
+    "project_id": "agric-hub-7f633",
+    "storage_bucket": "agric-hub-7f633.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:592956308849:android:22f7b077c94c246a7b8ad0",
+        "mobilesdk_app_id": "1:306541753546:android:74892580e427ec0359f033",
         "android_client_info": {
           "package_name": "com.example.firmer_city"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAOXuvcnZumNlB9M3afuWMHKGb7gEtUw9I"
+          "current_key": "AIzaSyATDVkG-YddtZkoxFAzSsjywbk4kjT3lHM"
         }
       ],
       "services": {

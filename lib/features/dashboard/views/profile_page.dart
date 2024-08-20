@@ -1,6 +1,6 @@
-import 'package:firmer_city/features/auth/provider/login_provider.dart';
-import 'package:firmer_city/generated/assets.dart';
-import 'package:firmer_city/utils/styles.dart';
+import '/features/auth/provider/login_provider.dart';
+import '/generated/assets.dart';
+import '/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';

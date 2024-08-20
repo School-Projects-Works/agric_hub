@@ -1,9 +1,9 @@
-import 'package:firmer_city/core/widget/footer_page.dart';
-import 'package:firmer_city/features/community/provider/community_provider.dart';
-import 'package:firmer_city/features/main/views/components/landing_page.dart';
-import 'package:firmer_city/features/main/views/components/top_questions.dart';
-import 'package:firmer_city/features/market/vews/feature_products.dart';
-import 'package:firmer_city/utils/styles.dart';
+import '/core/widget/footer_page.dart';
+import '/features/community/provider/community_provider.dart';
+import '/features/main/views/components/landing_page.dart';
+import '/features/main/views/components/top_questions.dart';
+import '/features/market/vews/feature_products.dart';
+import '/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_framework/responsive_framework.dart';

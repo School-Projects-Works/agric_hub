@@ -1,5 +1,5 @@
-import 'package:firmer_city/features/auth/views/pages/registration_pages/bio_data_page.dart';
-import 'package:firmer_city/features/auth/views/pages/registration_pages/user_type_page.dart';
+import '/features/auth/views/pages/registration_pages/bio_data_page.dart';
+import '/features/auth/views/pages/registration_pages/user_type_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -42,7 +42,7 @@ class _RegistrationPageState extends ConsumerState<RegistrationPage> {
                     case 0:
                       return const UserTypeScreen();
                     case 1:
-                      return  BioDataPage();
+                      return BioDataPage();
 
                     default:
                       return Container();

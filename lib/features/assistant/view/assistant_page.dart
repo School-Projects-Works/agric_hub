@@ -1,13 +1,13 @@
-import 'package:firmer_city/core/widget/custom_button.dart';
-import 'package:firmer_city/core/widget/custom_input.dart';
-import 'package:firmer_city/features/assistant/data/chat_model.dart';
-import 'package:firmer_city/features/assistant/data/messages_model.dart';
-import 'package:firmer_city/features/assistant/provider/actions_provider.dart';
-import 'package:firmer_city/features/assistant/provider/chat_provider.dart';
-import 'package:firmer_city/features/auth/provider/login_provider.dart';
-import 'package:firmer_city/generated/assets.dart';
-import 'package:firmer_city/utils/colors.dart';
-import 'package:firmer_city/utils/styles.dart';
+import '/core/widget/custom_button.dart';
+import '/core/widget/custom_input.dart';
+import '/features/assistant/data/chat_model.dart';
+import '/features/assistant/data/messages_model.dart';
+import '/features/assistant/provider/actions_provider.dart';
+import '/features/assistant/provider/chat_provider.dart';
+import '/features/auth/provider/login_provider.dart';
+import '/generated/assets.dart';
+import '/utils/colors.dart';
+import '/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -88,7 +88,7 @@ class _AssitantPageState extends ConsumerState<AssitantPage> {
                         margin: const EdgeInsets.all(20),
                         decoration: const BoxDecoration(
                             image: DecorationImage(
-                                image: AssetImage(Assets.imagesFarmerIcon))),
+                                image: AssetImage(Assets.imagesIcon))),
                       ),
                       _buildInitCards(),
                     ],
@@ -175,7 +175,7 @@ class _AssitantPageState extends ConsumerState<AssitantPage> {
                                 borderRadius: BorderRadius.circular(50),
                                 image: const DecorationImage(
                                     image:
-                                        AssetImage(Assets.imagesFarmerIcon))),
+                                        AssetImage(Assets.imagesIcon))),
                           ),
                           title: Text(chat.firstQuestion ?? ''),
                           subtitle: Text(TimeUtils.formatDateTime(
@@ -365,9 +365,7 @@ class _AssitantPageState extends ConsumerState<AssitantPage> {
                 onPressed: () {
                   pressNotifier.state = true;
                 },
-                icon: 
-                  Icons.upload_file,
-                  
+                icon: Icons.upload_file,
               ),
             )),
         ResponsiveVisibility(
@@ -395,9 +393,7 @@ class _AssitantPageState extends ConsumerState<AssitantPage> {
                                     );
                               },
                               radius: 10,
-                              icon:
-                                Icons.upload_file,
-                                
+                              icon: Icons.upload_file,
                             ),
                             const SizedBox(
                               width: 5,
@@ -417,9 +413,7 @@ class _AssitantPageState extends ConsumerState<AssitantPage> {
                                       user: user,
                                     );
                               },
-                              icon: 
-                                Icons.camera,
-                               
+                              icon: Icons.camera,
                             ),
                             if (pressProvider)
                               const SizedBox(
@@ -430,7 +424,7 @@ class _AssitantPageState extends ConsumerState<AssitantPage> {
                                 text: '',
                                 radius: 10,
                                 color: Colors.red,
-                                icon:Icons.cancel,
+                                icon: Icons.cancel,
                                 onPressed: () {
                                   pressNotifier.state = false;
                                 },
@@ -458,9 +452,7 @@ class _AssitantPageState extends ConsumerState<AssitantPage> {
                               );
                         },
                         radius: 10,
-                        icon: 
-                          Icons.upload_file,
-                         
+                        icon: Icons.upload_file,
                       ),
                       const SizedBox(
                         width: 5,
@@ -480,9 +472,7 @@ class _AssitantPageState extends ConsumerState<AssitantPage> {
                                 user: user,
                               );
                         },
-                        icon: 
-                          Icons.camera,
-                          
+                        icon: Icons.camera,
                       ),
                       if (pressProvider && breakPoint.isMobile)
                         const SizedBox(
@@ -603,7 +593,7 @@ class _AssitantPageState extends ConsumerState<AssitantPage> {
             children: [
               CircleAvatar(
                 radius: 15,
-                backgroundImage: AssetImage(Assets.imagesFarmerIcon),
+                backgroundImage: AssetImage(Assets.imagesIcon),
               ),
               SizedBox(
                 width: 5,

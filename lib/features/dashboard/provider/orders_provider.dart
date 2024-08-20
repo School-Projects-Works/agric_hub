@@ -1,9 +1,9 @@
-import 'package:firmer_city/core/widget/custom_dialog.dart';
-import 'package:firmer_city/features/auth/data/user_model.dart';
-import 'package:firmer_city/features/auth/provider/login_provider.dart';
-import 'package:firmer_city/features/dashboard/data/oder_model.dart';
-import 'package:firmer_city/features/dashboard/services/order_services.dart';
-import 'package:firmer_city/features/market/data/product_model.dart';
+import '/core/widget/custom_dialog.dart';
+import '/features/auth/data/user_model.dart';
+import '/features/auth/provider/login_provider.dart';
+import '/features/dashboard/data/oder_model.dart';
+import '/features/dashboard/services/order_services.dart';
+import '/features/market/data/product_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../cart/data/cart_model.dart';
@@ -76,13 +76,14 @@ class OrderProvider extends StateNotifier<OrderFilter> {
       //if is delivery
       //reduce stock
       if (copyWith.status == 'delivered') {
-        var cart = copyWith.items.toList().map((e) => CartItem.fromMap(e)).toList();
-        for(var item in cart){
+        var cart =
+            copyWith.items.toList().map((e) => CartItem.fromMap(e)).toList();
+        for (var item in cart) {
           var product = ProductModel.fromMap(item.product);
-          product = product.copyWith(productStock: product.productStock - item.quantity);
+          product = product.copyWith(
+              productStock: product.productStock - item.quantity);
           await MarketServices.updateProduct(product);
         }
-       
       }
       CustomDialog.dismiss();
       CustomDialog.showToast(message: 'Order updated successfully');

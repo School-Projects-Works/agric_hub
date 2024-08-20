@@ -1,6 +1,5 @@
-
-import 'package:firmer_city/features/comments/model/comment_data.dart';
-import 'package:firmer_city/features/comments/services/comment_services.dart';
+import '/features/comments/model/comment_data.dart';
+import '/features/comments/services/comment_services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final commentsStreamProvider = StreamProvider.autoDispose

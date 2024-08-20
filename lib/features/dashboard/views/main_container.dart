@@ -1,16 +1,16 @@
-import 'package:firmer_city/config/router/router.dart';
-import 'package:firmer_city/config/router/router_info.dart';
-import 'package:firmer_city/core/widget/app_bar_item.dart';
-import 'package:firmer_city/core/widget/custom_dialog.dart';
-import 'package:firmer_city/features/auth/provider/login_provider.dart';
-import 'package:firmer_city/features/dashboard/components/side_bar.dart';
-import 'package:firmer_city/features/dashboard/provider/orders_provider.dart';
-import 'package:firmer_city/features/dashboard/provider/products_provider.dart';
-import 'package:firmer_city/generated/assets.dart';
-import 'package:firmer_city/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import '../../../config/router/router.dart';
+import '../../../config/router/router_info.dart';
+import '../../../core/widget/app_bar_item.dart';
+import '../../../core/widget/custom_dialog.dart';
+import '../../../generated/assets.dart';
+import '../../../utils/colors.dart';
+import '../../auth/provider/login_provider.dart';
+import '../components/side_bar.dart';
+import '../provider/orders_provider.dart';
+import '../provider/products_provider.dart';
 
 class MainContainer extends ConsumerWidget {
   const MainContainer({super.key, required this.child});
@@ -89,11 +89,11 @@ class MainContainer extends ConsumerWidget {
             title: Row(
               children: [
                 Image.asset(
-                  Assets.imagesFarmerLogo,
+                  Assets.imagesLogoLight,
                   height: 40,
                 ),
                 const SizedBox(width: 10),
-                if (breakPoint.smallerThan(TABLET))
+                if (breakPoint.smallerOrEqualTo(TABLET))
                   //manu button
                   PopupMenuButton(
                       color: primaryColor,

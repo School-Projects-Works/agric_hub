@@ -1,10 +1,10 @@
-import 'package:firmer_city/config/router/router.dart';
-import 'package:firmer_city/config/router/router_info.dart';
-import 'package:firmer_city/core/widget/custom_dialog.dart';
-import 'package:firmer_city/features/auth/provider/login_provider.dart';
-import 'package:firmer_city/generated/assets.dart';
-import 'package:firmer_city/utils/colors.dart';
-import 'package:firmer_city/utils/styles.dart';
+import '/config/router/router.dart';
+import '/config/router/router_info.dart';
+import '/core/widget/custom_dialog.dart';
+import '/features/auth/provider/login_provider.dart';
+import '/generated/assets.dart';
+import '/utils/colors.dart';
+import '/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -44,7 +44,7 @@ class _NavBarState extends ConsumerState<NavBar> {
                   .navigateToRoute(RouterInfo.homeRoute);
             },
             child: Image.asset(
-              Assets.imagesFarmerLogo,
+              Assets.imagesLogoH,
               width: 200,
             ),
           ),
@@ -59,15 +59,6 @@ class _NavBarState extends ConsumerState<NavBar> {
                     onTap: () {
                       MyRouter(context: context, ref: ref)
                           .navigateToRoute(RouterInfo.homeRoute);
-                    }),
-                const SizedBox(width: 25),
-                NavItem(
-                    title: 'Community',
-                    isActive: ref.watch(routerProvider) ==
-                        RouterInfo.communityRoute.name,
-                    onTap: () {
-                      MyRouter(context: context, ref: ref)
-                          .navigateToRoute(RouterInfo.communityRoute);
                     }),
                 const SizedBox(width: 25),
                 NavItem(
@@ -86,6 +77,15 @@ class _NavBarState extends ConsumerState<NavBar> {
                     onTap: () {
                       MyRouter(context: context, ref: ref)
                           .navigateToRoute(RouterInfo.assistantRoute);
+                    }),
+                const SizedBox(width: 25),
+                NavItem(
+                    title: 'Community',
+                    isActive: ref.watch(routerProvider) ==
+                        RouterInfo.communityRoute.name,
+                    onTap: () {
+                      MyRouter(context: context, ref: ref)
+                          .navigateToRoute(RouterInfo.communityRoute);
                     }),
                 const SizedBox(width: 25),
                 if (user.id == null)

@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:firmer_city/core/widget/footer_page.dart';
-import 'package:firmer_city/features/market/vews/feature_products.dart';
-import 'package:firmer_city/generated/assets.dart';
+import '/core/widget/footer_page.dart';
+import '/features/market/vews/feature_products.dart';
+import '/generated/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -16,22 +16,23 @@ class _MarketPageState extends ConsumerState<MarketPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              buildCarousel(),
-              const SizedBox(
-                height: 20,
-              ),
-              const FeaturedProducts(quantity: 0,),
-              const SizedBox(
-                height: 20,
-              ),
-              const FooterPage()
-            ],
+      child: Column(
+        children: [
+          buildCarousel(),
+          const SizedBox(
+            height: 20,
           ),
-        ));
+          const FeaturedProducts(
+            quantity: 0,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const FooterPage()
+        ],
+      ),
+    ));
   }
 
   Widget buildCarousel() {
@@ -50,9 +51,8 @@ class _MarketPageState extends ConsumerState<MarketPage> {
           enlargeCenterPage: true,
           scrollDirection: Axis.horizontal),
       items: [
-        Assets.slideSlideOne,
-        Assets.slideSlideTwo,
-        Assets.slideSlideThree
+        Assets.slideSlide1,
+        Assets.slideSlide2
       ].map((i) {
         return Builder(
           builder: (BuildContext context) {

@@ -1,15 +1,13 @@
-import 'package:firmer_city/core/widget/custom_dialog.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import 'package:firmer_city/features/assistant/data/chat_model.dart';
-import 'package:firmer_city/features/assistant/data/messages_model.dart';
-import 'package:firmer_city/features/assistant/services/chat_services.dart';
-import 'package:firmer_city/features/assistant/services/gpt_services.dart';
-import 'package:firmer_city/features/assistant/services/messages_services.dart';
-import 'package:firmer_city/features/auth/data/user_model.dart';
 import 'package:image_picker/image_picker.dart';
-
+import '../../../core/widget/custom_dialog.dart';
+import '../../auth/data/user_model.dart';
 import '../../auth/provider/login_provider.dart';
+import '../data/chat_model.dart';
+import '../data/messages_model.dart';
+import '../services/chat_services.dart';
+import '../services/gpt_services.dart';
+import '../services/messages_services.dart';
 
 final chatStreamProvider =
     StreamProvider.autoDispose<List<ChatModel>>((ref) async* {

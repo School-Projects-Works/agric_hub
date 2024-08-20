@@ -1,8 +1,8 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:firmer_city/generated/assets.dart';
-import 'package:firmer_city/utils/styles.dart';
+import '/generated/assets.dart';
+import '/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -12,8 +12,8 @@ class LandingPage extends ConsumerWidget {
 
   List<Map<String, String>> data = [
     {
-      'image': Assets.slideSlide2,
-      'title': 'Welcome to Farmer City',
+      'image': Assets.slideSlide3,
+      'title': 'Welcome to Agric Hub',
       'description':
           'This is a platform for farmers to connect and share ideas, knowledge and sell their products'
     },
@@ -24,7 +24,7 @@ class LandingPage extends ConsumerWidget {
           'Use our A. I assistant to help you with your farming activities and get the best results. From plant disease detection to weather forecast, we got you covered.'
     },
     {
-      'image': Assets.slideSlidw1,
+      'image': Assets.slideSlide4,
       'title': 'Get the best products from our store',
       'description':
           'We have the best fresh farm products for you to buy. Check them out now. Visit the farm by using our farm routing feature.'
@@ -33,7 +33,7 @@ class LandingPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     var breakPoint = ResponsiveBreakpoints.of(context);
-    var styles = Styles( context);
+    var styles = Styles(context);
     return CarouselSlider(
       options: CarouselOptions(
           height: breakPoint.screenHeight * 0.6,

@@ -1,15 +1,15 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:firmer_city/core/widget/custom_button.dart';
-import 'package:firmer_city/core/widget/custom_dialog.dart';
-import 'package:firmer_city/core/widget/custom_input.dart';
-import 'package:firmer_city/features/auth/provider/login_provider.dart';
-import 'package:firmer_city/features/cart/data/cart_model.dart';
-import 'package:firmer_city/features/cart/provider/cart_provider.dart';
-import 'package:firmer_city/features/market/data/product_model.dart';
-import 'package:firmer_city/features/market/provider/market_provider.dart';
-import 'package:firmer_city/generated/assets.dart';
-import 'package:firmer_city/utils/colors.dart';
-import 'package:firmer_city/utils/styles.dart';
+import '/core/widget/custom_button.dart';
+import '/core/widget/custom_dialog.dart';
+import '/core/widget/custom_input.dart';
+import '/features/auth/provider/login_provider.dart';
+import '/features/cart/data/cart_model.dart';
+import '/features/cart/provider/cart_provider.dart';
+import '/features/market/data/product_model.dart';
+import '/features/market/provider/market_provider.dart';
+import '/generated/assets.dart';
+import '/utils/colors.dart';
+import '/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:maps_launcher/maps_launcher.dart';
@@ -182,7 +182,7 @@ class _FeaturedProductsState extends ConsumerState<FeaturedProducts> {
                               ),
                               errorWidget: (context, url, error) => Padding(
                                   padding: const EdgeInsets.all(100),
-                                  child: Image.asset(Assets.imagesFarmerIcon)),
+                                  child: Image.asset(Assets.imagesIcon)),
                             ),
                           ),
                           Padding(
@@ -250,8 +250,10 @@ class _FeaturedProductsState extends ConsumerState<FeaturedProducts> {
                                     ),
                                     TextButton(
                                         onPressed: () {
-                                          var address = AddressModel.fromMap(product.address);
-                                          if(address.lat!=0&&address.long!=0){
+                                          var address = AddressModel.fromMap(
+                                              product.address);
+                                          if (address.lat != 0 &&
+                                              address.long != 0) {
                                             MapsLauncher.launchCoordinates(
                                                 address.lat, address.long);
                                           }
@@ -285,14 +287,16 @@ class _FeaturedProductsState extends ConsumerState<FeaturedProducts> {
                                             fontWeight: FontWeight.bold),
                                       )
                                     ])),
-                                    const Spacer(),
+                                    const SizedBox(
+                                      width: 12,
+                                    ),
                                     //in stock
                                     if (product.productStock > 0)
                                       Container(
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 5, vertical: 2),
                                         decoration: BoxDecoration(
-                                            color: Colors.green,
+                                            color: Color(0xFFAF4C4C),
                                             borderRadius:
                                                 BorderRadius.circular(5)),
                                         child: Text(

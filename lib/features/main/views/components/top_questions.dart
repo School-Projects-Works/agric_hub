@@ -1,8 +1,8 @@
-import 'package:firmer_city/config/router/router.dart';
-import 'package:firmer_city/config/router/router_info.dart';
-import 'package:firmer_city/features/community/provider/community_provider.dart';
-import 'package:firmer_city/utils/colors.dart';
-import 'package:firmer_city/utils/styles.dart';
+import '/config/router/router.dart';
+import '/config/router/router_info.dart';
+import '/features/community/provider/community_provider.dart';
+import '/utils/colors.dart';
+import '/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:responsive_framework/responsive_framework.dart';

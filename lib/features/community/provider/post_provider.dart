@@ -1,8 +1,8 @@
-import 'package:firmer_city/core/widget/custom_dialog.dart';
-import 'package:firmer_city/features/auth/data/user_model.dart';
-import 'package:firmer_city/features/comments/model/comment_data.dart';
-import 'package:firmer_city/features/community/data/community_post_model.dart';
-import 'package:firmer_city/features/community/services/community_services.dart';
+import '/core/widget/custom_dialog.dart';
+import '/features/auth/data/user_model.dart';
+import '/features/comments/model/comment_data.dart';
+import '/features/community/data/community_post_model.dart';
+import '/features/community/services/community_services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../comments/services/comment_services.dart';
 

@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:faker/faker.dart';
 import 'package:flutter/foundation.dart';
 
-import 'package:firmer_city/core/constant/constant_strings.dart';
-import 'package:firmer_city/features/auth/data/user_model.dart';
+import '/core/constant/constant_strings.dart';
+import '/features/auth/data/user_model.dart';
 
 class ProductModel {
   String id;
@@ -35,13 +35,12 @@ class ProductModel {
     required this.productOwnerId,
     required this.productOwnerName,
     required this.productOwnerImage,
-     this.productLocation='',
-     this.canBeDelivered=true,
+    this.productLocation = '',
+    this.canBeDelivered = true,
     required this.productStock,
-    this.address=const {},
+    this.address = const {},
     required this.createdAt,
   });
-  
 
   ProductModel copyWith({
     String? id,
@@ -83,12 +82,12 @@ class ProductModel {
 
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
-  
+
     result.addAll({'id': id});
     result.addAll({'productName': productName});
     result.addAll({'productDescription': productDescription});
     result.addAll({'productType': productType});
-    if(productMeasurement != null){
+    if (productMeasurement != null) {
       result.addAll({'productMeasurement': productMeasurement});
     }
     result.addAll({'productPrice': productPrice});
@@ -100,11 +99,11 @@ class ProductModel {
     result.addAll({'productLocation': productLocation});
     result.addAll({'canBeDelivered': canBeDelivered});
     result.addAll({'productStock': productStock});
-    if(address != null){
+    if (address != null) {
       result.addAll({'address': address});
     }
     result.addAll({'createdAt': createdAt});
-  
+
     return result;
   }
 
@@ -131,7 +130,8 @@ class ProductModel {
 
   String toJson() => json.encode(toMap());
 
-  factory ProductModel.fromJson(String source) => ProductModel.fromMap(json.decode(source));
+  factory ProductModel.fromJson(String source) =>
+      ProductModel.fromMap(json.decode(source));
 
   @override
   String toString() {
@@ -141,44 +141,44 @@ class ProductModel {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-  
+
     return other is ProductModel &&
-      other.id == id &&
-      other.productName == productName &&
-      other.productDescription == productDescription &&
-      other.productType == productType &&
-      other.productMeasurement == productMeasurement &&
-      other.productPrice == productPrice &&
-      listEquals(other.productImages, productImages) &&
-      other.productCategory == productCategory &&
-      other.productOwnerId == productOwnerId &&
-      other.productOwnerName == productOwnerName &&
-      other.productOwnerImage == productOwnerImage &&
-      other.productLocation == productLocation &&
-      other.canBeDelivered == canBeDelivered &&
-      other.productStock == productStock &&
-      mapEquals(other.address, address) &&
-      other.createdAt == createdAt;
+        other.id == id &&
+        other.productName == productName &&
+        other.productDescription == productDescription &&
+        other.productType == productType &&
+        other.productMeasurement == productMeasurement &&
+        other.productPrice == productPrice &&
+        listEquals(other.productImages, productImages) &&
+        other.productCategory == productCategory &&
+        other.productOwnerId == productOwnerId &&
+        other.productOwnerName == productOwnerName &&
+        other.productOwnerImage == productOwnerImage &&
+        other.productLocation == productLocation &&
+        other.canBeDelivered == canBeDelivered &&
+        other.productStock == productStock &&
+        mapEquals(other.address, address) &&
+        other.createdAt == createdAt;
   }
 
   @override
   int get hashCode {
     return id.hashCode ^
-      productName.hashCode ^
-      productDescription.hashCode ^
-      productType.hashCode ^
-      productMeasurement.hashCode ^
-      productPrice.hashCode ^
-      productImages.hashCode ^
-      productCategory.hashCode ^
-      productOwnerId.hashCode ^
-      productOwnerName.hashCode ^
-      productOwnerImage.hashCode ^
-      productLocation.hashCode ^
-      canBeDelivered.hashCode ^
-      productStock.hashCode ^
-      address.hashCode ^
-      createdAt.hashCode;
+        productName.hashCode ^
+        productDescription.hashCode ^
+        productType.hashCode ^
+        productMeasurement.hashCode ^
+        productPrice.hashCode ^
+        productImages.hashCode ^
+        productCategory.hashCode ^
+        productOwnerId.hashCode ^
+        productOwnerName.hashCode ^
+        productOwnerImage.hashCode ^
+        productLocation.hashCode ^
+        canBeDelivered.hashCode ^
+        productStock.hashCode ^
+        address.hashCode ^
+        createdAt.hashCode;
   }
 }
 
@@ -270,10 +270,10 @@ class AddressModel {
         long.hashCode ^
         phone.hashCode;
   }
-    static List<ProductModel> dummyProduct(UserModel user) {
+
+  static List<ProductModel> dummyProduct() {
     try {
       final _faker = Faker();
-
       List<ProductModel> data = [];
       for (var i = 0; i < products.length; i++) {
         var item = products[i];
@@ -283,7 +283,7 @@ class AddressModel {
           address: _faker.address.streetAddress(),
           lat: _faker.geo.latitude(),
           long: _faker.geo.longitude(),
-          phone: user.phone!,
+          phone: _faker.phoneNumber.us(),
         );
         var product = ProductModel(
           id: _faker.guid.guid(),
@@ -318,10 +318,10 @@ class AddressModel {
           productPrice: _faker.randomGenerator.decimal(min: 10).toString(),
           productImages: item['images'],
           productCategory: item['parentCategory'],
-          productOwnerId: user.id!,
-          productOwnerName: user.name!,
+          productOwnerId: _faker.guid.guid(),
+          productOwnerName: _faker.person.name(),
           productOwnerImage:
-              user.profileImage ?? _faker.image.image(keywords: ['profile']),
+              _faker.image.image(keywords: ['profile']),
           productStock: _faker.randomGenerator.integer(30),
           address: address.toMap(),
           canBeDelivered: _faker.randomGenerator.boolean(),
@@ -337,6 +337,4 @@ class AddressModel {
       return [];
     }
   }
-
-
 }

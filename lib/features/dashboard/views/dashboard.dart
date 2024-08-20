@@ -1,12 +1,12 @@
 import 'package:data_table_2/data_table_2.dart';
-import 'package:firmer_city/features/auth/provider/login_provider.dart';
-import 'package:firmer_city/features/cart/data/cart_model.dart';
-import 'package:firmer_city/features/dashboard/components/dasboard_item.dart';
-import 'package:firmer_city/features/dashboard/provider/orders_provider.dart';
-import 'package:firmer_city/features/dashboard/provider/products_provider.dart';
-import 'package:firmer_city/features/market/data/product_model.dart';
-import 'package:firmer_city/utils/colors.dart';
-import 'package:firmer_city/utils/styles.dart';
+import '/features/auth/provider/login_provider.dart';
+import '/features/cart/data/cart_model.dart';
+import '/features/dashboard/components/dasboard_item.dart';
+import '/features/dashboard/provider/orders_provider.dart';
+import '/features/dashboard/provider/products_provider.dart';
+import '/features/market/data/product_model.dart';
+import '/utils/colors.dart';
+import '/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
@@ -240,12 +240,14 @@ class _DashBoardState extends ConsumerState<DashBoard> {
                                             deliveryDetails: {
                                               'address': order.buyerAddress
                                             });
-                                        ref.read(orderProvider.notifier)
+                                        ref
+                                            .read(orderProvider.notifier)
                                             .updateOrder(copyWith);
                                       } else {
-                                        var copyWith = order.copyWith(
-                                            status: 'Cancelled');
-                                        ref.read(orderProvider.notifier)
+                                        var copyWith =
+                                            order.copyWith(status: 'Cancelled');
+                                        ref
+                                            .read(orderProvider.notifier)
                                             .updateOrder(copyWith);
                                       }
                                     },
@@ -278,16 +280,16 @@ class _DashBoardState extends ConsumerState<DashBoard> {
                                           PopupMenuItem(
                                               value: 'Cancelled',
                                               child: Padding(
-                                            padding: const EdgeInsets.only(
-                                                right: 40,
-                                                top: 5,
-                                                bottom: 5,
-                                                left: 10),
-                                            child: Text(
-                                              'Cancel',
-                                              style: styles.body(),
-                                            ),
-                                          )),
+                                                padding: const EdgeInsets.only(
+                                                    right: 40,
+                                                    top: 5,
+                                                    bottom: 5,
+                                                    left: 10),
+                                                child: Text(
+                                                  'Cancel',
+                                                  style: styles.body(),
+                                                ),
+                                              )),
                                       ];
                                     },
                                     child: const Icon(Icons.apps),

@@ -1,4 +1,4 @@
-import 'package:firmer_city/utils/styles.dart';
+import '/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firmer_city/features/assistant/data/messages_model.dart';
+import '/features/assistant/data/messages_model.dart';
 
 class MessagesServices {
   static final FirebaseFirestore _firestore = FirebaseFirestore.instance;

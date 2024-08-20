@@ -1,7 +1,7 @@
-import 'package:firmer_city/core/widget/custom_dialog.dart';
-import 'package:firmer_city/features/auth/provider/login_provider.dart';
-import 'package:firmer_city/features/market/data/product_model.dart';
-import 'package:firmer_city/features/market/services/market_services.dart';
+import '/core/widget/custom_dialog.dart';
+import '/features/auth/provider/login_provider.dart';
+import '/features/market/data/product_model.dart';
+import '/features/market/services/market_services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final dashboardProductStreamProvider =

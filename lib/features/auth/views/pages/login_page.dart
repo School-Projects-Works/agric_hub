@@ -1,6 +1,6 @@
-import 'package:firmer_city/config/router/router.dart';
-import 'package:firmer_city/utils/colors.dart';
-import 'package:firmer_city/utils/styles.dart';
+import '/config/router/router.dart';
+import '/utils/colors.dart';
+import '/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -81,7 +81,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           Image.asset(
-                                            Assets.imagesFarmerIcon,
+                                            Assets.imagesIcon,
                                             width: 300,
                                           ),
                                         ],
@@ -108,7 +108,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                                             Condition.largerThan(name: TABLET)
                                           ],
                                           child: Image.asset(
-                                              Assets.imagesFarmerIcon,
+                                              Assets.imagesIcon,
                                               width: 80,
                                               height: 80)),
                                       Text(

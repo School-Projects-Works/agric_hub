@@ -1,9 +1,12 @@
+// ignore_for_file: avoid_print
+
 import 'dart:typed_data';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class GPTServices {
+
   static Future<bool> isQuestionFarmRelated(String question) async {
     try {
       final response = await http.post(
@@ -187,7 +190,7 @@ Future<bool> sendMessage(String phoneNumber, String message) async {
   try {
     final response = await http.get(Uri.parse(baseUrl
         .replaceFirst('PhoneNumber', phoneNumber)
-        .replaceFirst('SenderID', 'FarmerCity')
+        .replaceFirst('SenderID', 'Agrihub')
         .replaceFirst('YourMessage', message)));
     if (response.statusCode == 200) {
       return true;

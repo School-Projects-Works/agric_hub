@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAKs-D_l8mjWtsDfJKh4JlJ-pvAXfBi1nI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>306541753546</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.firmerCity</string>
+	<key>PROJECT_ID</key>
+	<string>agric-hub-7f633</string>
+	<key>STORAGE_BUCKET</key>
+	<string>agric-hub-7f633.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:306541753546:ios:f566a7ca80938da059f033</string>
+</dict>
+</plist>

@@ -1,9 +1,9 @@
 import 'dart:typed_data';
 
-import 'package:firmer_city/core/widget/custom_dialog.dart';
-import 'package:firmer_city/features/auth/provider/login_provider.dart';
-import 'package:firmer_city/features/market/data/product_model.dart';
-import 'package:firmer_city/features/market/services/market_services.dart';
+import '/core/widget/custom_dialog.dart';
+import '/features/auth/provider/login_provider.dart';
+import '/features/market/data/product_model.dart';
+import '/features/market/services/market_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
@@ -78,7 +78,7 @@ class NewProductProvider extends StateNotifier<ProductModel> {
       required GlobalKey<FormState> form}) async {
     CustomDialog.showLoading(message: 'Saving product...');
     var user = ref.watch(userProvider);
-  
+
     AddressModel address = ref.read(productAddProvider);
     address = address.copyWith(phone: user.phone);
     List<String> images = [];
@@ -117,7 +117,6 @@ class NewProductProvider extends StateNotifier<ProductModel> {
       ref.read(productImagesProvider.notifier).clearImages();
       ref.read(productAddProvider.notifier).clear();
       form.currentState!.reset();
-     
     } else {
       CustomDialog.dismiss();
       CustomDialog.showToast(message: 'Failed to save product');
@@ -147,10 +146,9 @@ class ProductImages extends StateNotifier<List<Uint8List>> {
   }
 }
 
-
-
-final productAddProvider = StateNotifierProvider<ProductAddProvider, AddressModel>(
-      (ref) {
+final productAddProvider =
+    StateNotifierProvider<ProductAddProvider, AddressModel>(
+  (ref) {
     return ProductAddProvider();
   },
 );
@@ -158,12 +156,12 @@ final productAddProvider = StateNotifierProvider<ProductAddProvider, AddressMode
 class ProductAddProvider extends StateNotifier<AddressModel> {
   ProductAddProvider()
       : super(AddressModel(
-    city: '',
-    region: 'region',
-    address: 'address',
-    lat: 0,
-    long: 0,
-    phone: ''));
+            city: '',
+            region: 'region',
+            address: 'address',
+            lat: 0,
+            long: 0,
+            phone: ''));
 
   void setCity(String s) {
     state = state.copyWith(city: s);
@@ -189,8 +187,8 @@ class ProductAddProvider extends StateNotifier<AddressModel> {
     state = state.copyWith(long: s);
   }
 
-
-  void clear(){
-    state = state.copyWith(city: '', region: '', address: '', lat: 0, long: 0, phone: '');
+  void clear() {
+    state = state.copyWith(
+        city: '', region: '', address: '', lat: 0, long: 0, phone: '');
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:firmer_city/features/market/data/product_model.dart';
-import 'package:firmer_city/features/market/services/market_services.dart';
+import '/features/market/data/product_model.dart';
+import '/features/market/services/market_services.dart';
 
 final productStreamProvider =
     StreamProvider.autoDispose<List<ProductModel>>((ref) async* {

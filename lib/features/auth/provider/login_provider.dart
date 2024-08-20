@@ -1,5 +1,5 @@
-import 'package:firmer_city/config/router/router.dart';
-import 'package:firmer_city/features/auth/data/user_model.dart';
+import '/config/router/router.dart';
+import '/features/auth/data/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive/hive.dart';
@@ -31,7 +31,7 @@ class LoginProvider extends StateNotifier<UserModel> {
     var (message, user) = await AuthServices.login(
         email: state.email!, password: state.password!);
     if (user != null) {
-      if (user.emailVerified == false&& !user.email!.contains('koda')) {
+      if (user.emailVerified == false && !user.email!.contains('koda')) {
         CustomDialog.dismiss();
         CustomDialog.showInfo(
             message: 'Your email is not verified, please verify your email',

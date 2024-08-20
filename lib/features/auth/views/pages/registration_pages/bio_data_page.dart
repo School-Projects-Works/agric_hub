@@ -1,8 +1,8 @@
-import 'package:firmer_city/config/router/router.dart';
-import 'package:firmer_city/config/router/router_info.dart';
-import 'package:firmer_city/features/auth/provider/register_screen_provider.dart';
-import 'package:firmer_city/utils/colors.dart';
-import 'package:firmer_city/utils/styles.dart';
+import '/config/router/router.dart';
+import '/config/router/router_info.dart';
+import '/features/auth/provider/register_screen_provider.dart';
+import '/utils/colors.dart';
+import '/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../../core/widget/custom_button.dart';

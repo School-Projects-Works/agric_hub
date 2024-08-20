@@ -1,8 +1,8 @@
 import 'package:data_table_2/data_table_2.dart';
-import 'package:firmer_city/config/router/router.dart';
-import 'package:firmer_city/core/widget/custom_button.dart';
-import 'package:firmer_city/core/widget/custom_dialog.dart';
-import 'package:firmer_city/core/widget/custom_input.dart';
+import '/config/router/router.dart';
+import '/core/widget/custom_button.dart';
+import '/core/widget/custom_dialog.dart';
+import '/core/widget/custom_input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';

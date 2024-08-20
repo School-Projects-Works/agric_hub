@@ -3,9 +3,7 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 import '../../utils/styles.dart';
 
-
 enum ToastType { success, error, warning, info }
-
 
 class CustomDialog {
   static void showLoading({required String message}) {
@@ -124,7 +122,7 @@ class CustomDialog {
                 offset: const Offset(0, -40),
                 child: const CircleAvatar(
                   radius: 50,
-                  backgroundColor: Colors.green,
+                  backgroundColor: Color(0xFFAF4C4C),
                   child: Icon(
                     Icons.check,
                     size: 50,
@@ -180,7 +178,7 @@ class CustomDialog {
     SmartDialog.show(
       maskColor: Colors.transparent,
       builder: (context) {
-        var styles = Styles( context);
+        var styles = Styles(context);
         return Container(
           width: 400,
           height: 230,
@@ -238,8 +236,10 @@ class CustomDialog {
                           Expanded(
                             child: TextButton(
                               style: TextButton.styleFrom(
-                                foregroundColor:
-                                    Theme.of(context).textTheme.bodyLarge!.color,
+                                foregroundColor: Theme.of(context)
+                                    .textTheme
+                                    .bodyLarge!
+                                    .color,
                               ),
                               onPressed: () {
                                 if (onPressed != null) {
@@ -266,8 +266,10 @@ class CustomDialog {
                           Expanded(
                             child: TextButton(
                               style: TextButton.styleFrom(
-                                foregroundColor:
-                                    Theme.of(context).textTheme.bodyLarge!.color,
+                                foregroundColor: Theme.of(context)
+                                    .textTheme
+                                    .bodyLarge!
+                                    .color,
                               ),
                               onPressed: () {
                                 if (onPressed2 != null) {
@@ -322,7 +324,7 @@ class CustomDialog {
       animationType: SmartAnimationType.centerScale_otherSlide,
       clickMaskDismiss: false,
       builder: (context) {
-        var styles = Styles( context);
+        var styles = Styles(context);
         return Container(
           alignment: Alignment.center,
           padding: const EdgeInsets.all(10),

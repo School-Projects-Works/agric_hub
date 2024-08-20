@@ -1,13 +1,15 @@
-import 'package:firmer_city/config/router/router.dart';
-import 'package:firmer_city/config/router/router_info.dart';
-import 'package:firmer_city/core/widget/custom_dialog.dart';
-import 'package:firmer_city/features/cart/data/cart_model.dart';
-import 'package:firmer_city/features/community/data/community_post_model.dart';
-import 'package:firmer_city/features/community/services/community_services.dart';
-import 'package:firmer_city/features/main/views/components/nav_bar.dart';
-import 'package:firmer_city/features/cart/provider/cart_provider.dart';
-import 'package:firmer_city/features/market/services/market_services.dart';
-import 'package:firmer_city/utils/colors.dart';
+import 'package:firmer_city/features/market/data/product_model.dart';
+
+import '/config/router/router.dart';
+import '/config/router/router_info.dart';
+import '/core/widget/custom_dialog.dart';
+import '/features/cart/data/cart_model.dart';
+import '/features/community/data/community_post_model.dart';
+import '/features/community/services/community_services.dart';
+import '/features/main/views/components/nav_bar.dart';
+import '/features/cart/provider/cart_provider.dart';
+import '/features/market/services/market_services.dart';
+import '/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:badges/badges.dart' as badges;
@@ -64,19 +66,25 @@ class MainHomePage extends ConsumerWidget {
     );
   }
 
-  Future<void> saveDunny(WidgetRef ref) async {
+  Future<void> saveDummy(WidgetRef ref) async {
     await checkLogin(ref);
-    var data = PostModel.dummy();
-    for (var i = 0; i < 10; i++) {
-      data[i].createdAt = DateTime.now().millisecondsSinceEpoch;
-      data[i].id = CommunityServices.getId();
-      if (i < 2 &&
-          ref.watch(userProvider).id != null &&
-          ref.watch(userProvider).id != '') {
-        data[i].authorId = ref.watch(userProvider).id;
-      }
-      await CommunityServices.savePost(data[i]);
-    }
+    // var data = PostModel.dummy();
+    // for (var i = 0; i < 10; i++) {
+    //   data[i].createdAt = DateTime.now().millisecondsSinceEpoch;
+    //   data[i].id = CommunityServices.getId();
+    //   if (i < 2 &&
+    //       ref.watch(userProvider).id != null &&
+    //       ref.watch(userProvider).id != '') {
+    //     data[i].authorId = ref.watch(userProvider).id;
+    //   }
+    //   await CommunityServices.savePost(data[i]);
+
+    // var data = AddressModel.dummyProduct();
+    // for (var i = 0; i < 10; i++) {
+    //   data[i].createdAt = DateTime.now().millisecondsSinceEpoch;
+    //   data[i].id = MarketServices.getId();
+    //   await MarketServices.saveProduct(data[i]);
+    // }
   }
 
   Future<void> saveDummyProducts(WidgetRef ref) async {
