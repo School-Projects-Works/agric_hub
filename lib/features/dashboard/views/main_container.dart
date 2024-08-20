@@ -89,7 +89,7 @@ class MainContainer extends ConsumerWidget {
             title: Row(
               children: [
                 Image.asset(
-                  Assets.imagesLogoLight,
+                  Assets.imagesIcon,
                   height: 40,
                 ),
                 const SizedBox(width: 10),

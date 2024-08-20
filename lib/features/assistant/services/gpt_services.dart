@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 import 'dart:typed_data';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:http/http.dart' as http;
